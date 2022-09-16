@@ -1,8 +1,8 @@
-FROM kilna/liquibase
-LABEL maintainer="Kilna kilna@kilna.com"
+FROM andeath/liquibase-docker:4.15.0
+LABEL maintainer="as"
 
 ARG jdbc_driver_version
-ENV jdbc_driver_version=${jdbc_driver_version:-42.1.4}\
+ENV jdbc_driver_version=${jdbc_driver_version:-42.3.1}\
     jdbc_driver_download_url=https://jdbc.postgresql.org/download\
     LIQUIBASE_PORT=${LIQUIBASE_PORT:-5432}\
     LIQUIBASE_CLASSPATH=${LIQUIBASE_CLASSPATH:-/opt/jdbc/postgres-jdbc.jar}\
